@@ -7,26 +7,21 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "团子和蛋糕的博客",
+	title: "meiou的博客",
 
 	// 站点副标题
-	subtitle: "",
+	subtitle: "demo",
 
 	// 站点 URL
-	site_url: "https://blog.tsh520.cn",
+	site_url: "",
 
 	// 站点描述
 	description:
-		"团子和蛋糕的博客，一个分享技术见解与生活感悟的个人空间。涵盖编程开发、实用工具推荐、ACG文化与日常生活的随想，记录成长的每一步。",
+		"再做个博客试试看",
 
 	// 站点关键词
 	keywords: [
-		"团子",
-		"团子和蛋糕",
-		"蛋糕",
-		"团子和蛋糕的博客",
-		"团子的博客",
-		"蛋糕的博客",
+		"demo",
 	],
 
 	// 主题色
@@ -76,9 +71,9 @@ export const siteConfig: SiteConfig = {
 			alt: "🍀",
 		},
 		// 导航栏标题
-		title: "团子和蛋糕",
+		title: "meiou",
 		// 悬停时显示的互动颜文字
-		hoverTitle: "w(ﾟДﾟ)w 不要走！再看看嘛！",
+		hoverTitle: "喵！",
 		// 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满
 		widthFull: false,
 		// 导航栏图标和标题是否跟随主题色
@@ -86,13 +81,13 @@ export const siteConfig: SiteConfig = {
 	},
 
 	// 站点开始日期，用于统计运行天数
-	siteStartDate: "2025-9-1",
+	siteStartDate: "2026-9-1",
 
 	// 门户区配置
 	portal: {
 		announcement: {
 			enable: true,
-			text: "欢迎来到团子和蛋糕的博客！这里有技术分享、生活记录和更多有趣内容。",
+			text: "观察人类中。。",
 		},
 		dailyQuote: {
 			enable: true,
@@ -148,7 +143,7 @@ export const siteConfig: SiteConfig = {
 	// bangumi配置
 	bangumi: {
 		// Bangumi用户ID
-		userId: "1219895",
+		userId: "",
 	},
 
 	// 豆瓣配置
@@ -160,17 +155,17 @@ export const siteConfig: SiteConfig = {
 	// 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
 	pages: {
 		// 赞助页面开关
-		sponsor: true,
+		sponsor: false,
 		// 留言板页面开关，需要配置评论系统
-		guestbook: true,
+		guestbook: false,
 		// 原番组计划页面开关（已拆分，保留关闭）
 		bangumi: false,
 		// 书架页面开关
-		books: true,
+		books: false,
 		// 影视与游戏页面开关
-		moviesGames: true,
+		moviesGames: false,
 		// 音乐页面开关
-		musicPage: true,
+		musicPage: false,
 		// 更新日志页面开关
 		changelog: true,
 	},
@@ -248,7 +243,7 @@ export const siteConfig: SiteConfig = {
 		// 初始缩放级别
 		zoom: 4,
 		// 是否显示地图标记点
-		showMarkers: true,
+		showMarkers: false,
 	},
 
 	// 字体配置

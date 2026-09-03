@@ -45,9 +45,9 @@ export const homeConfig = {
 		backgroundImageMobilePool: _mobImgs.length > 0 ? _mobImgs : [],
 		speechAccentImage: `${replicaRoot}/main/home2-1.webp`,
 		dialogue: {
-			enabled: true,
+			enabled: false,
 			speakers: {
-				host: "团子",
+				host: "喵",
 				visitor: "访客",
 			},
 			menuTitle: "想聊点什么？",
@@ -123,7 +123,7 @@ export const homeConfig = {
 	},
 
 	displayLayer: {
-		enabled: true,
+		enabled: false,
 		kicker: "作品展示",
 		title: "CRYSTALLIZE GALLERY",
 		description:

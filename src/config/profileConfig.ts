@@ -12,13 +12,13 @@ export const profileConfig: ProfileConfig = {
 	avatarOffWork: "",
 
 	// 名字
-	name: "团子和蛋糕",
+	name: "meiou",
 
 	// 首页展示名字（留空则使用 name）
-	displayName: "Dumpling",
+	displayName: "ATGC",
 
 	// 职业/身份标签
-	occupation: "[技术博主 / 生活记录者]",
+	occupation: "[干饭纪录保持者]",
 
 	// 个人签名（支持多条，会循环打字+删除效果）
 	bio: ["如果你喜欢，那么欢迎来到我的世界！", "海棠花未眠，老陈总在我身边"],

@@ -163,14 +163,14 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 		{
 			// 组件类型：恋爱计时小组件
 			type: "relationship",
-			enable: true,
+			enable: false,
 			position: "top",
 			showOnPostPage: false,
 		},
 		{
 			// 组件类型：抖音热搜
 			type: "douyinHot",
-			enable: true,
+			enable: false,
 			position: "top",
 			showOnPostPage: false,
 		},
@@ -188,7 +188,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件类型：今日一言
 			type: "quoteOfTheDay",
 			// 是否启用该组件
-			enable: true,
+			enable: false,
 			// 组件位置
 			position: "top",
 			// 是否在文章详情页显示
@@ -198,7 +198,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件类型：最近更新组件
 			type: "recentItems",
 			// 是否启用该组件
-			enable: true,
+			enable: false,
 			// 组件位置
 			position: "top",
 			// 是否在文章详情页显示
@@ -241,7 +241,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件类型：恋爱计时小组件
 			type: "relationship",
 			// 是否启用该组件
-			enable: true,
+			enable: false,
 			// 是否在文章详情页显示
 			showOnPostPage: true,
 		},
@@ -249,9 +249,9 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件类型：最近更新组件
 			type: "recentItems",
 			// 是否启用该组件
-			enable: true,
+			enable: false,
 			// 是否在文章详情页显示
-			showOnPostPage: true,
+			showOnPostPage: false,
 		},
 		{
 			// 组件类型：公告组件
@@ -267,7 +267,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 是否启用该组件
 			enable: false,
 			// 是否在文章详情页显示
-			showOnPostPage: true,
+			showOnPostPage: false,
 		},
 		{
 			// 组件类型：站点统计组件
