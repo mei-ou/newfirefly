@@ -37,7 +37,7 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.site_url,
-	// Cloudflare Pages 部署静态产物，不启用 SSR 适配器
+	// Cloudflare Workers Static Assets 直接托管静态产物
 	output: "static",
 
 	base: "/",
