@@ -12,16 +12,16 @@ export const profileConfig: ProfileConfig = {
 	avatarOffWork: "",
 
 	// 名字
-	name: "meiou",
+	name: "高桥然子",
 
 	// 首页展示名字（留空则使用 name）
 	displayName: "ATGC",
 
 	// 职业/身份标签
-	occupation: "[干饭纪录保持者]",
+	occupation: "[高桥然子就是高桥然子]",
 
 	// 个人签名（支持多条，会循环打字+删除效果）
-	bio: ["如果你喜欢，那么欢迎来到我的世界！", "海棠花未眠，老陈总在我身边"],
+	bio: ["如果你喜欢，那么欢迎来到我的世界！", "嗨！我是高桥然子，欢迎来到我的博客！"],
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
@@ -30,35 +30,35 @@ export const profileConfig: ProfileConfig = {
 	// `pnpm add @iconify-json/<icon-set-name>`
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
-		{
-			name: "WeChat",
-			icon: "simple-icons:wechat",
-			url: "/assets/ziyuan/vx.webp",
-			showName: false,
-		},
-		{
-			name: "QQ",
-			icon: "simple-icons:tencentqq",
-			url: "/assets/ziyuan/qq.webp",
-			showName: false,
-		},
-		{
-			name: "GitHub",
-			icon: "simple-icons:github",
-			url: "https://github.com/tianshihao2003",
-			showName: false,
-		},
+		//{
+		//	name: "WeChat",
+		//	icon: "simple-icons:wechat",
+		//	url: "/assets/ziyuan/vx.webp",
+		//	showName: false,
+		//},
+		//{
+		//	name: "QQ",
+		//	icon: "simple-icons:tencentqq",
+		//	url: "/assets/ziyuan/qq.webp",
+		//	showName: false,
+		//},
+		//{
+		//	name: "GitHub",
+		//	icon: "simple-icons:github",
+		//	url: "https://github.com/tianshihao2003",
+		//	showName: false,
+		//},
 		{
 			name: "Email",
 			icon: "material-symbols:mail-outline",
-			url: "mailto:3109581507@qq.com",
+			url: "mailto:1523668840@qq.com",
 			showName: false,
 		},
-		{
-			name: "Bilibili",
-			icon: "simple-icons:bilibili",
-			url: "https://space.bilibili.com/1394731616?spm_id_from=333.1007.0.0",
-			showName: false,
-		},
+		//{
+		//	name: "Bilibili",
+		//	icon: "simple-icons:bilibili",
+		//	url: "https://space.bilibili.com/1394731616?spm_id_from=333.1007.0.0",
+		//	showName: false,
+		//},
 	],
 };

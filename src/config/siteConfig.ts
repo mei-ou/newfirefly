@@ -7,7 +7,7 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "meiou的博客",
+	title: "高桥然子的博客",
 
 	// 站点副标题
 	subtitle: "demo",
@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
 
 	// 站点描述
 	description:
-		"再做个博客试试看",
+		"做个博客试试看",
 
 	// 站点关键词
 	keywords: [
@@ -71,7 +71,7 @@ export const siteConfig: SiteConfig = {
 			alt: "🍀",
 		},
 		// 导航栏标题
-		title: "meiou",
+		title: "高桥然子",
 		// 悬停时显示的互动颜文字
 		hoverTitle: "喵！",
 		// 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满

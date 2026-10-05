@@ -12,7 +12,7 @@ import type { SecurityConfig } from "../types/config";
  * 密码丢失无法恢复（密文不可逆），请务必妥善保管。
  */
 export const securityConfig: SecurityConfig = {
-	enabled: true,
+	enabled: false,
 	pbkdf2Iterations: 250_000,
 	rememberDays: 7,
 	maxAttempts: 5,
