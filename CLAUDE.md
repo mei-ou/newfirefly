@@ -77,8 +77,8 @@ src/
 │   └── 404, about, archive, apps, changelog, circle, debug-urls, friends,
 │       guestbook, life/notebooks, movies-games/, music, projects, search,
 │       sponsor, rss, robots.txt, og
-├── plugins/             # 自定义 remark/rehype 插件 (10)
-├── styles/              # CSS 样式（72 个文件，含 about 技术栈/时间线/更新日志图谱）
+├── plugins/             # 自定义 remark/rehype 插件与辅助文件 (13，含 Wiki Link 的 2 个模块及类型声明)
+├── styles/              # CSS 样式（75 个文件，含 Wiki Link 卡片及 about 技术栈/时间线/更新日志图谱）
 │   ├── tokens/          # 设计令牌：colors, breakpoints, animation, z-index
 │   ├── base/            # reset, utilities
 │   ├── components/      # 组件样式
@@ -734,6 +734,10 @@ Vercel（PagesCMS 实例，绑定 cms-origin.tsh520.cn）
 ---
 
 ## 20. 文档同步规范（强制）
+
+2026-10-06：Wiki Link 本地验收完成。真实 Markdown processor 验证独占段落卡片、行内文字链接、中文标题锚点，以及代码示例不转换；生成卡片 HTML/CSS 在 320、390、768、1440px 无横向溢出。`pnpm build`（含 Pagefind）通过，`pnpm check` 为 0 错误、0 警告、30 提示；本轮新增 3 个插件文件的 Biome 检查通过。全仓 `pnpm exec biome ci ./src --reporter=github` 仍有既有格式问题，未批量整理原站；不能称全仓检查全绿。构建中的动态 import 分析、既有 CSS 和空集合提示仍保留。依赖入口已用本地缓存离线恢复，未关闭 TLS 校验。本轮没有真实发布文章，没有提交、推送或部署；后台构建产物使用本地预览配置，不能直接上线。
+
+2026-10-05：参考博客接入网页后台生成的 Wiki Link。新增 `src/plugins/remark-admin-wiki-link.mjs`、`src/plugins/wiki-link-transform.mjs` 与类型声明，Markdown/MDX 两个 remark 管线均注册插件；样式经 `src/styles/main.css` 导入 `src/styles/components/wiki-link-card.css`。无需新增直接依赖，复用 gray-matter 和 Astro 已使用的 github-slugger。支持 frontmatter slug、根目录相对文章路径、唯一裸文件名、标题锚点和别名；单独成段显示卡片，行内显示文字链接。重名裸文件、未找到文章和草稿保留原文，代码及现有链接内不转换。未改变默认文章路由，slug 仍由 Astro glob loader 根据原始 frontmatter 或文件路径决定。同步新增 `src/content/changelog/2026-10-05-wiki-links.md`；本轮不提交、不推送、不部署。
 
 **修改项目时，必须同步更新 CLAUDE.md**，保证文档与项目实时一致：
 

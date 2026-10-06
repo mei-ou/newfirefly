@@ -36,6 +36,7 @@
 @import './components/cards.css';
 @import './components/buttons.css';
 @import './components/links.css';
+@import './components/wiki-link-card.css';
 @import './components/dropdown.css';
 @import './components/pagination.css';
 @import './components/floating-dock.css';

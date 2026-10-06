@@ -1,0 +1,21 @@
+.newfirefly-wiki-card {
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+ margin-block: 1.25rem;
+ padding: 1rem;
+ border: 1px solid var(--line-divider);
+ border-radius: 0.75rem;
+ color: var(--deep-text);
+ background: var(--btn-card-bg-hover);
+ text-decoration: none;
+ overflow: hidden;
+ transition: border-color 0.2s ease;
+}
+.newfirefly-wiki-card:hover, .newfirefly-wiki-card:focus-visible { border-color: var(--primary); }
+.newfirefly-wiki-cover { width: 7rem; height: 5rem; object-fit: cover; border-radius: 0.5rem; flex: none; }
+.newfirefly-wiki-content { display: grid; gap: 0.4rem; min-width: 0; overflow-wrap: anywhere; }
+.newfirefly-wiki-title { color: var(--deep-text); font-weight: 700; }
+.newfirefly-wiki-description, .newfirefly-wiki-meta { color: var(--content-meta); font-size: 0.85rem; }
+.newfirefly-wiki-meta { font-size: 0.75rem; }
+@media (max-width: 480px) { .newfirefly-wiki-card { gap: 0.75rem; padding: 0.75rem; } .newfirefly-wiki-cover { width: 4.5rem; height: 4.5rem; } }
