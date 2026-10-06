@@ -34,6 +34,7 @@ import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { remarkAdminWikiLink } from "./src/plugins/remark-admin-wiki-link.mjs";
+import { remarkImageLayout } from "./src/plugins/image-layout.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -186,6 +187,7 @@ export default defineConfig({
 				smartypants: true,
 				remarkPlugins: [
 					remarkAdminWikiLink,
+					remarkImageLayout,
 					remarkMath,
 					remarkReadingTime,
 					remarkExcerpt,
@@ -243,6 +245,7 @@ export default defineConfig({
 			smartypants: true,
 			remarkPlugins: [
 				remarkAdminWikiLink,
+				remarkImageLayout,
 				remarkMath,
 				remarkReadingTime,
 				remarkExcerpt,

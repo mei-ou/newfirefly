@@ -12,7 +12,10 @@ export default function rehypeFigure() {
 	return (tree) => {
 		visit(tree, "element", (node, index, parent) => {
 			// 只处理 img 元素
-			if (node.tagName !== "img") {
+			if (
+				node.tagName !== "img" ||
+				node.properties?.["data-admin-layout-image"]
+			) {
 				return;
 			}
 

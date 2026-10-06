@@ -77,8 +77,8 @@ src/
 │   └── 404, about, archive, apps, changelog, circle, debug-urls, friends,
 │       guestbook, life/notebooks, movies-games/, music, projects, search,
 │       sponsor, rss, robots.txt, og
-├── plugins/             # 自定义 remark/rehype 插件与辅助文件 (13，含 Wiki Link 的 2 个模块及类型声明)
-├── styles/              # CSS 样式（75 个文件，含 Wiki Link 卡片及 about 技术栈/时间线/更新日志图谱）
+├── plugins/             # 自定义 remark/rehype 插件与辅助文件 (15，含 Wiki Link 和图片排版模块及类型声明)
+├── styles/              # CSS 样式（76 个文件，含图片组、Wiki Link 卡片及 about 技术栈/时间线/更新日志图谱）
 │   ├── tokens/          # 设计令牌：colors, breakpoints, animation, z-index
 │   ├── base/            # reset, utilities
 │   ├── components/      # 组件样式
@@ -734,6 +734,10 @@ Vercel（PagesCMS 实例，绑定 cms-origin.tsh520.cn）
 ---
 
 ## 20. 文档同步规范（强制）
+
+图片排版本地验收（2026-10-06）：`pnpm build` 和 `pnpm check` 通过，0 错误、0 警告、30 提示；新增图片插件及修改的 rehype-figure 检查通过。全仓 Biome 仍有 284 项既有格式诊断，不称全仓检查全绿。真实 Markdown processor 验证 4 类布局、图片说明只渲染一次、说明里的标签不生成脚本；生成 HTML/CSS 在 320/390/768/1440px 无页面横向溢出，手机横向滚动有效。后台完成模拟换图、批量上传和发布重开，没有访问真实图床或写入真实文章；前后台新图片功能均尚未提交／推送／部署。前后台须配套上线，否则排版围栏会显示为代码。
+
+2026-10-06：新增网页后台图片排版与换图支持。Markdown/MDX 两条 remark 管线注册 `src/plugins/image-layout.mjs` 的 `remarkImageLayout`，严格校验 image-layout 围栏里的 JSON；支持单图宽度/对齐、多图网格、横向滑动，以及电脑网格/手机滑动。配置只接受 HTTPS 图片或站内绝对路径，说明由 AST 文本渲染，不注入用户 HTML。样式通过 main.css 导入 `src/styles/components/image-layout.css`，手机滑动每张占容器 85%，单图保持比例；不更改图床文件。rehype-figure 对带 data-admin-layout-image 标记的图片跳过重复包裹。后台保留受保护源码并通过表单修改既有图片或图片组；普通 Markdown 图床图片也可回填换图，原文中的代码示例不转换。新增 `src/content/changelog/2026-10-06-image-layout.md`；无新依赖，无新服务器接口，不自动提交、推送或部署。
 
 2026-10-06：Wiki Link 本地验收完成。真实 Markdown processor 验证独占段落卡片、行内文字链接、中文标题锚点，以及代码示例不转换；生成卡片 HTML/CSS 在 320、390、768、1440px 无横向溢出。`pnpm build`（含 Pagefind）通过，`pnpm check` 为 0 错误、0 警告、30 提示；本轮新增 3 个插件文件的 Biome 检查通过。全仓 `pnpm exec biome ci ./src --reporter=github` 仍有既有格式问题，未批量整理原站；不能称全仓检查全绿。构建中的动态 import 分析、既有 CSS 和空集合提示仍保留。依赖入口已用本地缓存离线恢复，未关闭 TLS 校验。本轮没有真实发布文章，没有提交、推送或部署；后台构建产物使用本地预览配置，不能直接上线。
 

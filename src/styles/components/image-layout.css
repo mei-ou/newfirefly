@@ -1,0 +1,23 @@
+.custom-md .admin-image-layout { width: 100%; max-width: 100%; min-width: 0; margin-block: 1.5rem; gap: 1rem; }
+.custom-md .admin-image-layout .admin-image-item { margin: 0; min-width: 0; }
+.custom-md .admin-image-layout img { display: block; width: 100%; height: auto; max-width: 100%; border-radius: 0.6rem; }
+.custom-md .admin-image-layout figcaption { margin-top: 0.5rem; text-align: center; color: var(--content-meta); font-size: 0.85rem; overflow-wrap: anywhere; }
+.custom-md .admin-images-single.admin-image-width-25 { width: 25%; }
+.custom-md .admin-images-single.admin-image-width-50 { width: 50%; }
+.custom-md .admin-images-single.admin-image-width-75 { width: 75%; }
+.custom-md .admin-image-align-center { margin-inline: auto; }
+.custom-md .admin-image-align-right { margin-left: auto; }
+.custom-md .admin-images-grid, .custom-md .admin-images-adaptive { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.custom-md .admin-image-columns-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.custom-md .admin-image-columns-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.custom-md .admin-images-swipe { display: flex; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; padding-bottom: 0.75rem; }
+.custom-md .admin-images-swipe .admin-image-item { flex: 0 0 calc((100% - 2rem) / 3); scroll-snap-align: start; }
+.custom-md .admin-images-swipe.admin-image-columns-2 .admin-image-item { flex-basis: calc((100% - 1rem) / 2); }
+.custom-md .admin-images-swipe.admin-image-columns-4 .admin-image-item { flex-basis: calc((100% - 3rem) / 4); }
+.custom-md .admin-image-layout:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+@media (max-width: 640px) {
+ .custom-md .admin-images-single { min-width: min(100%, 16rem); }
+ .custom-md .admin-images-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .custom-md .admin-images-adaptive { display: flex; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; padding-bottom: 0.75rem; }
+ .custom-md .admin-image-layout.admin-images-swipe .admin-image-item, .custom-md .admin-images-adaptive .admin-image-item { flex: 0 0 85%; scroll-snap-align: start; }
+}
